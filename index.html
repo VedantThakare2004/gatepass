@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College Gate Pass System</title>
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #6e7ff3, #6e7ff3); /* Green gradient background */
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+      overflow: hidden;
+      flex-direction: column;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 20px;
+      animation: fadeIn 2s ease-out;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      color: white;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Landing Container */
+    .landing-container {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 500px;
+      text-align: center;
+      margin-top: 30px;
+      position: relative;
+      z-index: 10;
+    }
+
+    .landing-container p {
+      font-size: 1.2rem;
+      color: #333;
+      margin-bottom: 30px;
+      font-weight: 500;
+    }
+
+    /* Buttons Styling */
+    .btn-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px; /* Space between buttons */
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      font-size: 1.2rem;
+      font-weight: 600;
+      text-decoration: none;
+      color: white;
+      background: linear-gradient(45deg, #1E5A21, #2E7D32);
+      border-radius: 50px;
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn:hover {
+      transform: translateY(-5px);
+      background: linear-gradient(45deg, #2e7a7d, #318e81);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn:active {
+      transform: translateY(2px);
+      box-shadow: none;
+    }
+
+    /* Animation for Header */
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(-50px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      .landing-container {
+        width: 90%;
+        padding: 20px;
+      }
+
+      .btn {
+        font-size: 1rem;
+        padding: 10px 20px;
+      }
+
+      .btn-container {
+        flex-direction: column;
+        gap: 15px; /* Stack the buttons vertically on small screens */
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to College Gate Pass System</h1>
+  </header>
+  
+  <div class="landing-container">
+    <p>Register to create your account or login to manage your gate passes.</p>
+    <div class="btn-container">
+      <a href="register.php" class="btn">Register</a>
+      <a href="login.php" class="btn">Login</a>
+    </div>
+  </div>
+  
+</body>
+</html>

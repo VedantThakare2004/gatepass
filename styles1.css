@@ -1,0 +1,86 @@
+/* Global Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #6e7ff3, #ffffff);
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Form Container */
+  .container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px 30px;
+  }
+  
+  .form-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .form-header h1 {
+    color: #2e7d32;
+    font-size: 1.8rem;
+  }
+  
+  .form-header p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 8px;
+    color: #333;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  textarea {
+    resize: none;
+  }
+  
+  button {
+    display: block;
+    width: 100%;
+    background: #2e7d32;
+    color: white;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background: #1e5a21;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      margin: 20px;
+      padding: 15px;
+    }
+  
+    .form-header h1 {
+      font-size: 1.5rem;
+    }
+  }
+  

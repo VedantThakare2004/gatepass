@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gate Pass Generator</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(to bottom, #3f51b5, #ffffff);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      background: #ffffff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+      max-width: 600px;
+      width: 90%;
+      border-top: 6px solid #3f51b5;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .header h1 {
+      font-size: 1.8rem;
+      color: #3f51b5;
+      margin: 0;
+    }
+
+    .header h2 {
+      font-size: 1.2rem;
+      color: #333333;
+      margin: 5px 0 0 0;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 6px;
+      color: #333;
+      font-size: 0.95rem;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 1rem;
+      background-color: #f9f9f9;
+      transition: border-color 0.3s;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: #3f51b5;
+      outline: none;
+    }
+
+    button {
+      width: 100%;
+      background: #3f51b5;
+      color: white;
+      padding: 12px;
+      font-size: 1rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background: #2c3e9e;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 0.85rem;
+      color: #666;
+    }
+
+    .footer a {
+      color: #3f51b5;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .footer a:hover {
+      color: #2c3e9e;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>St. Vincent Pallotti College of Engineering & Tech</h1>
+      <h2>Gate Pass Generator</h2>
+    </div>
+    <form id="gatePassForm" action="submit_gatepass.php" method="POST" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+      </div>
+      <div class="form-group">
+        <label for="rollno">Roll Number</label>
+        <input type="text" id="rollno" name="rollno" placeholder="Enter your roll number" required>
+      </div>
+      <div class="form-group">
+        <label for="department">Department</label>
+        <select id="department" name="department" required>
+          <option value="">Select Department</option>
+          <option>Computer Engineering</option>
+          <option>Mechanical</option>
+          <option>Electrical</option>
+          <option>Electronics and Telecommunication</option>
+          <option>Civil</option>
+          <option>Automobile</option>
+          <option>Information Technology</option>
+          <option>Computer Engineering in Data Science</option>
+          <option>Computer Science & Business System</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="semester">Semester</label>
+        <select id="semester" name="semester" required>
+          <option value="">Select Semester</option>
+          <option>1st Semester</option>
+          <option>2nd Semester</option>
+          <option>3rd Semester</option>
+          <option>4th Semester</option>
+          <option>5th Semester</option>
+          <option>6th Semester</option>
+          <option>7th Semester</option>
+          <option>8th Semester</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="date">Date</label>
+        <input type="date" id="date" name="date" required>
+      </div>
+      <div class="form-group">
+        <label for="time">Time</label>
+        <input type="time" id="time" name="time" required>
+      </div>
+      <div class="form-group">
+        <label for="reason">Reason for Gate Pass</label>
+        <textarea id="reason" name="reason" rows="3" placeholder="Enter the reason" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="mobile_number">Mobile Number</label>
+        <input type="text" id="mobile_number" name="mobile_number" placeholder="Enter your mobile number" required>
+      </div>
+      <div class="form-group">
+        <label for="photo">Upload Photo (Optional)</label>
+        <input type="file" id="photo" name="photo" accept="image/*">
+      </div>
+      <button type="submit">Generate Gate Pass</button>
+    </form>
+    <div class="footer">
+      <p>&copy; 2024 St. Vincent Pallotti College. All rights reserved.</p>
+    </div>
+  </div>
+</body>
+</html>

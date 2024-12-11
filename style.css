@@ -1,0 +1,95 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #6e7ff3, #5b6fd8);
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.landing-container {
+  background: rgba(255, 255, 255, 0.2); /* Transparent background */
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px); /* Gives the frosted glass effect */
+  max-width: 450px;
+  width: 100%;
+  text-align: center;
+}
+
+.landing-container p {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 30px;
+  font-weight: 500;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Button Styling */
+.btn {
+  display: inline-block;
+  padding: 14px 35px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(45deg, #2e7d32, #1e5a21);
+  border-radius: 30px;
+  transition: all 0.3s ease-in-out;
+  margin: 15px 10px;
+}
+
+.btn:hover {
+  transform: translateY(-5px);
+  background: linear-gradient(45deg, #1e5a21, #2e7d32);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(2px);
+  box-shadow: none;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .landing-container {
+    padding: 20px;
+    width: 90%;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 10px 30px;
+  }
+}
